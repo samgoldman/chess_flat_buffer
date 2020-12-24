@@ -59,6 +59,10 @@ table Game {
   month:uint8;
   day:uint8;
 
+  site:string;
+  white:string;
+  black:string;
+
   white_rating:uint16;
   black_rating:uint16;
 
@@ -68,10 +72,6 @@ table Game {
   eco_category:byte;
   eco_subcategory:uint8;
 
-  // from_files:[Chess.File];
-  // from_ranks:[uint8];
-  // to_files:[Chess.File];
-  // to_ranks:[uint8];
   moves:[uint16];
 
   // Bits 0-2: Piece Moved
@@ -87,7 +87,7 @@ table Game {
   clock_seconds:[uint8];
 
   eval_available:bool;
-  eval_mate_in:[int8];
+  eval_mate_in:[int16];
   eval_advantage:[float32];
 
   result:Chess.GameResult;

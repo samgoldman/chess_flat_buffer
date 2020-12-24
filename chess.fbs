@@ -9,7 +9,7 @@ enum File : byte {
   F = 5,
   G = 6,
   H = 7,
-  N_A = 127
+  N_A = 8
 }
 
 enum Piece : byte {
@@ -65,26 +65,28 @@ table Game {
   time_control_main:uint16;
   time_control_increment:uint8;
 
-  opening:string;
   eco_category:byte;
   eco_subcategory:uint8;
 
-  from_files:[Chess.File];
-  to_files:[Chess.File];
-  from_ranks:[uint8];
-  to_ranks:[uint8];
+  // from_files:[Chess.File];
+  // from_ranks:[uint8];
+  // to_files:[Chess.File];
+  // to_ranks:[uint8];
+  moves:[uint];
 
-  promotions:[Chess.Piece];
-  moved:[Chess.Piece];
-  captured:[bool];
-  checks:[Chess.Check];
-  nags:[Chess.NAG];
+  // Bits 0-2: Piece Moved
+  // Bit    3: capture
+  // Bit    4: check
+  // Bit    5: mate
+  // Bits 6-8: nag
+  // Bits 9-11: promotion
+  move_metadata:[uint16];
 
   clock_hours:[uint8];
   clock_minutes:[uint8];
   clock_seconds:[uint8];
 
-  eval_is_mate_forceable:[bool];
+  eval_available:bool;
   eval_mate_in:[int8];
   eval_advantage:[float32];
 

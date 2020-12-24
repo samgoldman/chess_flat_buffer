@@ -72,7 +72,7 @@ table Game {
   // from_ranks:[uint8];
   // to_files:[Chess.File];
   // to_ranks:[uint8];
-  moves:[uint];
+  moves:[uint16];
 
   // Bits 0-2: Piece Moved
   // Bit    3: capture

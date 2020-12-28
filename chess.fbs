@@ -1,27 +1,5 @@
 namespace Chess;
 
-enum File : byte {
-  A = 0,
-  B = 1,
-  C = 2,
-  D = 3,
-  E = 4,
-  F = 5,
-  G = 6,
-  H = 7,
-  N_A = 8
-}
-
-enum Piece : byte {
-  None = 0,
-  Pawn = 1,
-  Knight = 2,
-  Bishop = 3,
-  Rook = 4,
-  Queen = 5,
-  King = 6,
-}
-
 enum GameResult : uint8 {
   White = 0,
   Black = 1,
@@ -35,23 +13,6 @@ enum Termination : uint8 {
   Abandoned = 2,
   RulesInfraction = 3,
   Unterminated = 4,
-}
-
-enum Check : uint8 {
-  None = 0,
-  Check = 1,
-  Mate = 2
-}
-
-enum NAG : uint8 {
-  None = 0,
-  Good = 1,
-  Mistake = 2,
-  Brilliant = 3,
-  Blunder = 4,
-  Speculative = 5,
-  Dubious = 6,
-  Unrecognized = 255,
 }
 
 table Game {

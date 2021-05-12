@@ -1,5 +1,6 @@
 namespace Chess;
 
+// Remove temporarily - rust flatbuffers v0.9 breaks enums
 //enum GameResult : uint8 {
 //  White = 0,
 //  Black = 1,
@@ -7,6 +8,7 @@ namespace Chess;
 //  Star = 255
 //}
 
+// Remove temporarily - rust flatbuffers v0.9 breaks enums
 //enum Termination : uint8 {
 //  Normal = 0,
 //  TimeForfeit = 1,

@@ -32,7 +32,7 @@ table Game {
   time_control_main:uint16;
   time_control_increment:uint8;
 
-  eco_category:byte;
+  eco_category:uint8;
   eco_subcategory:uint8;
 
   moves:[uint16];
